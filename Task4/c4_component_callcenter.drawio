@@ -1,0 +1,24 @@
+<mxfile host="app.diagrams.net" modified="2026-06-13T00:00:00.000Z" agent="Cursor" version="24.8.4">
+  <diagram id="c4comp" name="C4 Component Call Center Rates">
+    <mxGraphModel dx="1300" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="abs" value="АБС" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;" vertex="1" parent="1"><mxGeometry x="900" y="200" width="160" height="60" as="geometry"/></mxCell>
+        <mxCell id="abs_r" value="Rate Management Module" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;" vertex="1" parent="1"><mxGeometry x="880" y="280" width="200" height="50" as="geometry"/></mxCell>
+        <mxCell id="das" value="DAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;" vertex="1" parent="1"><mxGeometry x="480" y="200" width="200" height="60" as="geometry"/></mxCell>
+        <mxCell id="sync" value="Rate Sync Job" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;" vertex="1" parent="1"><mxGeometry x="420" y="290" width="120" height="40" as="geometry"/></mxCell>
+        <mxCell id="api" value="Rates Read API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;" vertex="1" parent="1"><mxGeometry x="560" y="290" width="120" height="40" as="geometry"/></mxCell>
+        <mxCell id="export" value="Rate Export Job" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;" vertex="1" parent="1"><mxGeometry x="700" y="290" width="130" height="40" as="geometry"/></mxCell>
+        <mxCell id="cc" value="CRM Кол-центра" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;" vertex="1" parent="1"><mxGeometry x="180" y="200" width="160" height="60" as="geometry"/></mxCell>
+        <mxCell id="sftp" value="SFTP Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999;fontColor=#fff;" vertex="1" parent="1"><mxGeometry x="700" y="400" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="partner" value="Партнёрский CC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999;fontColor=#fff;dashed=1;" vertex="1" parent="1"><mxGeometry x="900" y="400" width="140" height="50" as="geometry"/></mxCell>
+        <mxCell id="e1" style="html=1;endArrow=block;" edge="1" parent="1" source="abs_r" target="sync"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="html=1;endArrow=block;" edge="1" parent="1" source="api" target="cc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2l" value="REST read-only" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="e2"><mxGeometry relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="e3" style="html=1;endArrow=block;" edge="1" parent="1" source="export" target="sftp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="sftp" target="partner"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4l" value="CSV daily" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="e4"><mxGeometry relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,38 @@
+<mxfile host="app.diagrams.net" modified="2026-06-13T00:00:00.000Z" agent="Cursor" version="24.8.4">
+  <diagram id="c4container" name="C4 Container - Deposit MVP">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="title" value="C4 Container — MVP открытия депозитов (детализация ИБ и АБС)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1" vertex="1" parent="1"><mxGeometry x="350" y="10" width="600" height="30" as="geometry"/></mxCell>
+        <mxCell id="client" value="Клиент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="200" width="40" height="80" as="geometry"/></mxCell>
+        <mxCell id="back" value="Бэк-офис" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="400" width="40" height="80" as="geometry"/></mxCell>
+        <mxCell id="boundary" value="Банк «Стандарт»" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;dashed=1;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1" vertex="1" parent="1"><mxGeometry x="140" y="60" width="1100" height="520" as="geometry"/></mxCell>
+        <mxCell id="site" value="Сайт&#xa;[PHP, React]&#xa;Маркетинг, форма заявки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;strokeColor=#3A7CA5;" vertex="1" parent="1"><mxGeometry x="180" y="120" width="150" height="70" as="geometry"/></mxCell>
+        <mxCell id="ib" value="Интернет-банк&#xa;[ASP.NET MVC, MS SQL]&#xa;Монолит + модуль депозитов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;strokeColor=#3A7CA5;" vertex="1" parent="1"><mxGeometry x="180" y="220" width="180" height="80" as="geometry"/></mxCell>
+        <mxCell id="ib_ui" value="Deposit UI Module" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;fontColor=#000;" vertex="1" parent="1"><mxGeometry x="200" y="320" width="140" height="40" as="geometry"/></mxCell>
+        <mxCell id="ib_sms" value="SMS Confirmation Module" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;fontColor=#000;" vertex="1" parent="1"><mxGeometry x="200" y="370" width="160" height="40" as="geometry"/></mxCell>
+        <mxCell id="das" value="Deposit Application Service&#xa;[Java Spring Boot, PostgreSQL]&#xa;Заявки, кэш ставок, оркестрация" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;strokeColor=#3A7CA5;" vertex="1" parent="1"><mxGeometry x="480" y="220" width="220" height="90" as="geometry"/></mxCell>
+        <mxCell id="abs" value="АБС&#xa;[Delphi, Oracle PL/SQL]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;strokeColor=#3A7CA5;" vertex="1" parent="1"><mxGeometry x="780" y="220" width="180" height="80" as="geometry"/></mxCell>
+        <mxCell id="abs_rates" value="Rate Management Module" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;fontColor=#000;" vertex="1" parent="1"><mxGeometry x="760" y="320" width="170" height="40" as="geometry"/></mxCell>
+        <mxCell id="abs_app" value="Deposit Application Processing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;fontColor=#000;" vertex="1" parent="1"><mxGeometry x="760" y="370" width="200" height="40" as="geometry"/></mxCell>
+        <mxCell id="abs_int" value="Integration Adapter (DAS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;fontColor=#000;" vertex="1" parent="1"><mxGeometry x="760" y="420" width="170" height="40" as="geometry"/></mxCell>
+        <mxCell id="cc" value="Кол-центр CRM&#xa;[Java, React, PG]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;fontColor=#fff;" vertex="1" parent="1"><mxGeometry x="480" y="120" width="160" height="70" as="geometry"/></mxCell>
+        <mxCell id="sms" value="СМС-шлюз" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;fontColor=#fff;" vertex="1" parent="1"><mxGeometry x="480" y="400" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="e1" style="html=1;endArrow=block;" edge="1" parent="1" source="client" target="site"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="html=1;endArrow=block;" edge="1" parent="1" source="client" target="ib"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="html=1;endArrow=block;" edge="1" parent="1" source="site" target="das"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3l" value="GET rates HTTPS" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="e3"><mxGeometry relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="e4" style="html=1;endArrow=block;" edge="1" parent="1" source="site" target="cc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4l" value="lead HTTPS" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="e4"><mxGeometry relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="e5" style="html=1;endArrow=block;" edge="1" parent="1" source="ib" target="das"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5l" value="REST HTTPS" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="e5"><mxGeometry relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="e6" style="html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="das" target="abs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6l" value="async REST / batch" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="e6"><mxGeometry relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="e7" style="html=1;endArrow=block;" edge="1" parent="1" source="back" target="abs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" style="html=1;endArrow=block;" edge="1" parent="1" source="ib_sms" target="sms"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" style="html=1;endArrow=block;" edge="1" parent="1" source="das" target="sms"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" style="html=1;endArrow=block;" edge="1" parent="1" source="abs" target="sms"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

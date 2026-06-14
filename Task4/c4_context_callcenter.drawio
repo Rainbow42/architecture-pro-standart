@@ -1,0 +1,60 @@
+<mxfile host="65bd71144e">
+    <diagram id="c4ctx" name="C4 Context Call Center Rates">
+        <mxGraphModel dx="969" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="750" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="C4 Context — передача ставок депозитов в кол-центры (Task 4)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="250" y="20" width="550" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys" value="Банк «Стандарт»&#10;[Software System]&#10;&#10;АБС, DAS, CRM кол-центра, SFTP —&#10;публикация ставок депозитов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="309.33" width="300" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="op" value="Оператор&#10;кол-центра" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="319.33" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="back" value="Менеджер&#10;бэк-офиса" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="80" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="partner_op" value="Оператор&#10;партнёрского CC" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="509.33" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="partner_sys" value="Партнёрский кол-центр&#10;[External System]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;fontColor=#ffffff;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="514.33" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" style="html=1;endArrow=block;" parent="1" source="op" target="sys" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1l" value="CRM: read-only API&#10;ставок (DAS),&#10;консультация клиента" style="edgeLabel;html=1;fontSize=11;" parent="e1" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-60" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" style="html=1;endArrow=block;" parent="1" source="back" target="sys" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2l" value="АБС: изменение&#10;ставок депозитов" style="edgeLabel;html=1;fontSize=11;" parent="e2" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-20" y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" style="html=1;endArrow=block;dashed=1;" parent="1" source="sys" target="partner_sys" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3l" value="Передача ставок:&#10;SFTP CSV, мин. 1 раз/день" style="edgeLabel;html=1;fontSize=11;" connectable="0" vertex="1" parent="e3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-11" y="-33" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" style="html=1;endArrow=block;" edge="1" parent="1" source="partner_op" target="partner_sys">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4l" value="Консультирует&#10;по ставкам из CSV" style="edgeLabel;html=1;fontSize=11;" connectable="0" vertex="1" parent="e4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-75" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

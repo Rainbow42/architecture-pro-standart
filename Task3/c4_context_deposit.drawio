@@ -1,57 +1,70 @@
 <mxfile host="65bd71144e">
     <diagram id="c4context" name="C4 Context - Deposit MVP">
-        <mxGraphModel dx="920" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+        <mxGraphModel dx="1118" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="title" value="C4 Context — MVP открытия депозитов онлайн" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="300" y="20" width="500" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="sys" value="Банк «Стандарт»&#10;[Software System]&#10;&#10;Цифровые каналы и обработка&#10;заявок на депозиты (MVP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=12;" parent="1" vertex="1">
-                    <mxGeometry x="400" y="290" width="280" height="100" as="geometry"/>
+                <mxCell id="sys" value="Банк «Стандарт»&#10;[Software System]&#10;&#10;Сайт, интернет-банк, DAS, АБС,&#10;кол-центр — заявки на депозиты (MVP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="267.5" width="300" height="105" as="geometry"/>
                 </mxCell>
-                <mxCell id="client" value="Клиент банка" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="300" width="40" height="80" as="geometry"/>
+                <mxCell id="client" value="Клиент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="280" width="40" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="back" value="Менеджер&#10;бэк-офиса депозитов" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="520" y="500" width="40" height="80" as="geometry"/>
+                    <mxGeometry x="500" y="550" width="40" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="cc" value="Оператор&#10;кол-центра" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="450" width="40" height="80" as="geometry"/>
+                    <mxGeometry x="100" y="520" width="40" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="sms_ext" value="СМС-шлюз /&#10;Телеком-оператор&#10;[External System]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;fontColor=#ffffff;dashed=1;" parent="1" vertex="1">
-                    <mxGeometry x="820" y="305" width="160" height="70" as="geometry"/>
+                    <mxGeometry x="870" y="285" width="170" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="e1" style="html=1;endArrow=block;" parent="1" source="client" target="sys" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e1l" value="Подаёт заявку,&#10;смотрит депозиты" style="edgeLabel;html=1;" parent="e1" vertex="1" connectable="0">
+                <mxCell id="e1l" value="Сайт и ИБ (HTTPS):&#10;просмотр депозитов,&#10;подача заявок" style="edgeLabel;html=1;fontSize=11;" parent="e1" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint x="-50" y="-20" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="e2" style="html=1;endArrow=block;" parent="1" source="back" target="sys" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e2l" value="Обрабатывает заявки,&#10;ведёт ставки" style="edgeLabel;html=1;" parent="e2" vertex="1" connectable="0">
+                <mxCell id="e2l" value="АБС: обработка заявок,&#10;согласование ставок" style="edgeLabel;html=1;fontSize=11;" parent="e2" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="21" as="offset"/>
+                        <mxPoint x="30" y="-10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="e3" style="html=1;endArrow=block;" parent="1" source="cc" target="sys" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e3l" value="Обрабатывает лиды&#10;с сайта" style="edgeLabel;html=1;" parent="e3" vertex="1" connectable="0">
+                <mxCell id="e3l" value="CRM кол-центра:&#10;обработка лидов с сайта,&#10;звонок клиенту" style="edgeLabel;html=1;fontSize=11;" parent="e3" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint x="20" y="-15" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="e4" style="html=1;endArrow=block;" parent="1" source="sys" target="sms_ext" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e4l" value="Отправляет СМС" style="edgeLabel;html=1;" parent="e4" vertex="1" connectable="0">
+                <mxCell id="e4l" value="Отправляет СМС&#10;(ИБ, DAS, АБС)" style="edgeLabel;html=1;fontSize=11;" parent="e4" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="-50" y="2" as="offset"/>
+                        <mxPoint x="-40" y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" style="html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="sms_ext" target="client">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="955" y="200"/>
+                            <mxPoint x="120" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5l" value="СМС-уведомления&#10;(подтверждение, открытие)" style="edgeLabel;html=1;fontSize=11;" connectable="0" vertex="1" parent="e5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-340" y="-40" as="offset"/>
                     </mxGeometry>
                 </mxCell>
             </root>
